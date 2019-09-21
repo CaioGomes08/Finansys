@@ -25,18 +25,23 @@
   </div>
 </div>
 
-<form>
+<form [formGroup]="categoryForm">
   <div class="card">
     <div class="card-header">
-      Informações sobre a categoria
+      Informações sobre a categoria {{ currentAction }}
     </div>
     <div class="card-body">
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="name">Nome</label>
           <input type="text" class="form-control" id="name" formControlName="name">
+        </div>  
+        <div class="form-group col-md-8">
+          <label for="description">Descrição</label>
+          <input type="text" class="form-control" id="description" formControlName="description">
         </div>
       </div>
     </div>
   </div>
+  <button type="submit" class="btn btn-primary btn-lg float-right mt-3">Salvar</button>
 </form>
