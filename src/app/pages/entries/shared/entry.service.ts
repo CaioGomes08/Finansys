@@ -16,7 +16,7 @@ export class EntryService {
   private apiPath = 'api/entries';
 
   constructor(private http: HttpClient,
-    private categoryService: CategoryService) { }
+              private categoryService: CategoryService) { }
 
   getAll(): Observable<Entry[]> {
     return this.http.get(this.apiPath).pipe(
