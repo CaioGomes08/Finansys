@@ -1,16 +1,6 @@
-<nav class="mb-5">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <a [routerLink]="['/']">Home</a>
-    </li>
-    <li [routerLink]="['/categories']" class="breadcrumb-item">
-      Categorias
-    </li>
-    <li class="breadcrumb-item active">
-      <a>Formulário de Categorias</a>
-    </li>
-  </ol>
-</nav>
+<app-bread-crumb [itens]="[
+  {text:'Categorias', link:'/categories'}]">
+</app-bread-crumb>
 
 <div class="row mb-4">
   <div class="col-md-9">
@@ -39,7 +29,7 @@
             <div *ngIf="resourceForm.get('name').errors.required">campo obrigatório</div>
             <div *ngIf="resourceForm.get('name').errors.minlength">deve ter no mínimo 2 caracteres</div>
           </div>
-        </div>  
+        </div>
         <div class="form-group col-md-8">
           <label for="description">Descrição</label>
           <input type="text" class="form-control" id="description" formControlName="description">
@@ -53,5 +43,6 @@
       <li *ngFor="let error of serverErrorMessages">{{error}}</li>
     </ul>
   </div>
-  <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-primary btn-lg float-right mt-3">Salvar</button>
+  <button [disabled]="submittingForm || resourceForm.invalid" type="submit"
+    class="btn btn-primary btn-lg float-right mt-3">Salvar</button>
 </form>
