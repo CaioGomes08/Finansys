@@ -94,7 +94,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   protected createResource() {
     const resource: T = this.jsonDataToResourceFn(this.resourceForm.value);
 
-    this.resourceService.create(this.resource)
+    this.resourceService.create(resource)
       .subscribe(
         // tslint:disable-next-line: no-shadowed-variable
         resource => this.actionsForSuccess(resource),
