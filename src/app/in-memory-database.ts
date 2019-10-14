@@ -20,7 +20,11 @@ export class InMemoryDatabase implements InMemoryDbService {
             // tslint:disable-next-line: max-line-length
             {id: 2, name: 'Suplementos', categoryId: categories[1].id, category: categories[1], paid: true, date: '25/09/2019', amount: '50,80', type: 'expense', description: 'Suplemento alimentar' } as Entry,
             // tslint:disable-next-line: max-line-length
-            {id: 2, name: 'Salário empresa', categoryId: categories[3].id, category: categories[3], paid: true, date: '20/09/2019', amount: '4000,80', type: 'revenue', description: 'Adiantamento de salário' } as Entry,
+            {id: 3, name: 'Salário empresa', categoryId: categories[3].id, category: categories[3], paid: true, date: '20/09/2019', amount: '4000,80', type: 'revenue', description: 'Adiantamento de salário' } as Entry,
+            // tslint:disable-next-line: max-line-length
+            {id: 4, name: 'Salário empresa', categoryId: categories[3].id, category: categories[3], paid: true, date: '11/10/2019', amount: '4455,80', type: 'revenue', description: 'Adiantamento de salário' } as Entry,
+            // tslint:disable-next-line: max-line-length
+            {id: 5, name: 'Pagamento do cartāo', categoryId: categories[0].id, category: categories[0], paid: true, date: '16/10/2019', amount: '2000,80', type: 'expense', description: 'Pagamento do cartāo' } as Entry,
         ];
 
         return { categories, entries };
