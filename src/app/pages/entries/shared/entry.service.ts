@@ -48,7 +48,6 @@ export class EntryService extends BaseResourceService<Entry> {
       const yearMatches = entryDate.year() === +year;
 
       if (monthMatches && yearMatches) {
-        console.log('Entrou no if')
         return entry;
       }
 
